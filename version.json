@@ -1,0 +1,5 @@
+{
+  "version": "1.0.0",
+  "changelog": "### Tính năng mới\n- Dịch real-time loopback / mic / cả hai chiều\n- Hỗ trợ engine: Ollama, Claude, OpenAI, Google Translate, DeepL\n- Speaker diarization tự động nhận diện người nói\n- Giao diện đa ngôn ngữ (VI / EN / ZH / JA / KO / FR / DE / ES)\n- Auto-save hội thoại (JSON + TXT + CSV) mỗi 30 giây\n- Export lịch sử hội thoại ra TXT / CSV\n- Glossary thuật ngữ tùy chỉnh\n- Kiểm tra chính tả EN/VI trong log viewer\n- Tự động cập nhật phần mềm qua GitHub Releases",
+  "download_url": "https://github.com/HieuIN/ChatotTrans-releases/releases/download/v1.0.0/ChatotTrans-Lite-1.0.0.zip"
+}
