@@ -1,5 +1,5 @@
 {
-  "version": "1.1.4",
-  "changelog": "### Sửa lỗi — Google Translate bị block + lỗi dịch im lặng\n- **Google block bot**: thêm browser headers (User-Agent Chrome, Referer) vào mọi request\n  Google Translate — thiếu headers này Google nhận biết \"bot\" và trả 403/429 im lặng\n- **Fallback domain**: nếu `googleapis.com` fail, tự thử lại `translate.google.com`\n- **Lỗi im lặng**: khi cả Google lẫn Argos thất bại, nay hiện rõ\n  `⚠️ Không dịch được — kiểm tra mạng` trong vùng phụ đề thay vì chỉ hiện tiếng Anh",
-  "download_url": "https://github.com/HieuIN/ChatotTrans-releases/releases/download/v1.1.4/ChatotTrans-Lite-1.1.4.zip"
+  "version": "1.1.5",
+  "changelog": "### Sửa lỗi nghiêm trọng — `_hotwords_lock` crash khi context learner hoạt động\n- **Root cause**: `_hotwords_lock` và `_hotwords` được khởi tạo trong `_load_with_fallback()`\n  sau lệnh `raise RuntimeError` → dead code, không bao giờ chạy → `AttributeError` khi\n  `context_learner` gọi `set_hotwords()` sau khoảng 60 giây đầu tiên\n- **Fix**: chuyển init về `__init__()` trước khi gọi `_load_with_fallback()`\n- **Ảnh hưởng**: không hiển thị phụ đề nếu session kéo dài > 60 giây (context learn interval)\n\n### Chẩn đoán audio — VAD activity dot\n- **VAD dot** (●) trong thanh drag bar: nhấp nháy xanh mỗi khi VAD phát hiện giọng nói\n- Tooltip hướng dẫn kiểm tra Default Communication Device\n- **Tên thiết bị capture** hiện trên status bar khi bắt đầu capture (vd: `🔊 Capture: Headphones`)",
+  "download_url": "https://github.com/HieuIN/ChatotTrans-releases/releases/download/v1.1.5/ChatotTrans-Lite-1.1.5.zip"
 }
